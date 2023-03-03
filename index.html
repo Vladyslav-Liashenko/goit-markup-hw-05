@@ -39,7 +39,7 @@
             <section class="hero_image">
                 <div class="conteiner_hero">
                     <h1 class="hero_h1">Effective Solutions for Your Busine</h1>
-                    <button type="button" class="order">Order Service</button>
+                    <button type="button" class="order" data-modal-open>Order Service</button>
                 </div>
             </section>
             <section class="section1">
@@ -391,17 +391,16 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop">
-        <div class="modal_window">
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal_window" data-modal-close>
             <button class="style_button" type="button" width="24" height="24">
-                <svg class="modal_window_close" width="8" height="8">
+                <svg class="modal_window_close" width="8" height="8" data-modal-close>
                     <use href="./images/icon-close.svg#icon-closeclose-black-18dp">
                     </use>
                 </svg>
             </button>
         </div>
     </div>
-
     <script src="./js/modal.js"></script>
 </body>
 </html>

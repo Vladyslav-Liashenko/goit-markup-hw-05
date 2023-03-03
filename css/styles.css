@@ -6,6 +6,7 @@
     --border-bottom: #E7E9FC;
     --p_text: #434455;
     --fff: #FFFFFF;
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
     margin: auto;
@@ -30,6 +31,8 @@ body {
 .email:focus,
 .tel:focus {
     color: var(--hover-link);
+    animation-name: animate;
+    transition: var(--transition);
 }
 .studio_nav,
 .portfolio_nav,
@@ -372,6 +375,7 @@ button:focus {
     0px 1px 6px rgba(46, 47, 66, 0.08), 
     0px 1px 1px rgba(46, 47, 66, 0.16), 
     0px 2px 1px rgba(46, 47, 66, 0.08);
+    transition: var(--transition);
 }
 .position {
     font-style: normal;
@@ -397,6 +401,7 @@ img {
     0px 1px 6px rgba(46, 47, 66, 0.08), 
     0px 1px 1px rgba(46, 47, 66, 0.16), 
     0px 2px 1px rgba(46, 47, 66, 0.08);
+    transition: var(--transition);
 }
 .block_img_d {
     padding: 32px 16px;
@@ -440,6 +445,7 @@ img {
 .section3_socials_link:hover,
 .section3_socials_link:focus {
     background-color: var(--button-color);
+    transition: var(--transition);
 }
 .section3_svg_item {
     fill: var(--background-light-color)
@@ -447,6 +453,7 @@ img {
 .section3_svg_item:hover,
 .section3_svg_item:focus {
     fill: var(--background-light-color);
+    transition: var(--transition);
 }
 /* Block 4 */
 .section4 {
@@ -493,6 +500,7 @@ img {
 .section4_socials_link:focus {
     border: 1px solid var(--button-color);
     fill: var(--button-color);
+    transition: var(--transition);
 }
 /* Footter social */
 .container_footer{
@@ -527,6 +535,7 @@ img {
 .footer_socials_link:hover,
 .footer_socials_link:focus {
     background-color: #31D0AA;;
+    transition: var(--transition);
 }
 .footer_svg_item {
     fill: var(--background-light-color)
@@ -535,6 +544,7 @@ img {
 .sfooter_svg_item:hover,
 .footer_svg_item:focus {
     fill: var(--background-light-color);
+    transition: var(--transition);
 }
 /* Description img on portfolio */
 .img_text_description {
@@ -554,8 +564,10 @@ img {
     transform: translateY(100%);
     transition: transform 250ms;
 }
-.block_img:hover .info_img_portfolio {
+.block_img:hover .info_img_portfolio,
+.block_img:focus .info_img_portfolio {
     transform: translateY(0);
+    transition: var(--transition);
 }
 .text_info_img_portfolio {
     margin: 0px;
@@ -569,24 +581,32 @@ img {
 /* Modal window surway form */
 .backdrop {
     position: fixed;
-    display: flex;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    padding: 88px 0px 13px 0px;
     background: rgba(46, 47, 66, 0.4);
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 .modal_window {
     position: relative;
+    border-radius: 4px;
+    overflow: auto;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 408px;
+    max-height: 576px;
     background: #FCFCFC;
     box-shadow:
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    width: 408px;
-    height: 576px;
-    margin: 80px auto;
 }
 .style_button {
     position: absolute;
@@ -599,6 +619,8 @@ img {
     background: var(--border-bottom);
     border: 1px solid rgba(0, 0, 0, 0.1);
 } 
-.style_button:hover {
+.style_button:hover,
+.style_button:focus {
     fill: var(--fff);
+    transition: var(--transition);
 }
