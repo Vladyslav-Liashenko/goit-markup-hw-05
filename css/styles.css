@@ -19,6 +19,7 @@ body {
 .tel {
     text-decoration: none;
     color: var(--background-color);
+    transition: color var(--transition);
 }
 .studio_nav:hover, 
 .portfolio_nav:hover,
@@ -31,8 +32,6 @@ body {
 .email:focus,
 .tel:focus {
     color: var(--hover-link);
-    animation-name: animate;
-    transition: var(--transition);
 }
 .studio_nav,
 .portfolio_nav,
@@ -366,6 +365,7 @@ button {
     border-radius: 4px;
     font-family: 'Roboto';
     cursor: pointer;
+    transition: background-color var(--transition);
 }
 button:hover,
 button:focus {
@@ -375,7 +375,6 @@ button:focus {
     0px 1px 6px rgba(46, 47, 66, 0.08), 
     0px 1px 1px rgba(46, 47, 66, 0.16), 
     0px 2px 1px rgba(46, 47, 66, 0.08);
-    transition: var(--transition);
 }
 .position {
     font-style: normal;
@@ -441,6 +440,7 @@ img {
     height: 40px;
     background-color: var(--hover-link);
     border-radius: 50%;
+    transition: background-color var(--transition);
 }
 .section3_socials_link:hover,
 .section3_socials_link:focus {
@@ -448,12 +448,12 @@ img {
     transition: var(--transition);
 }
 .section3_svg_item {
-    fill: var(--background-light-color)
+    fill: var(--background-light-color);
+    transition: background-color var(--transition);
 }
 .section3_svg_item:hover,
 .section3_svg_item:focus {
     fill: var(--background-light-color);
-    transition: var(--transition);
 }
 /* Block 4 */
 .section4 {
@@ -495,12 +495,13 @@ img {
     align-items: center;
     display: flex;
     justify-content: center;
+    transition: fill var(--transition);
 }
 .section4_socials_link:hover,
 .section4_socials_link:focus {
     border: 1px solid var(--button-color);
     fill: var(--button-color);
-    transition: var(--transition);
+    
 }
 /* Footter social */
 .container_footer{
@@ -531,26 +532,27 @@ img {
     height: 40px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    transition: background-color var(--transition);
 }
 .footer_socials_link:hover,
 .footer_socials_link:focus {
     background-color: #31D0AA;;
-    transition: var(--transition);
 }
 .footer_svg_item {
-    fill: var(--background-light-color)
+    fill: var(--background-light-color);
+    transition: fill var(--transition);
 }
 
-.sfooter_svg_item:hover,
+.footer_svg_item:hover,
 .footer_svg_item:focus {
     fill: var(--background-light-color);
-    transition: var(--transition);
 }
 /* Description img on portfolio */
 .img_text_description {
     display: block;
     position: relative;
     overflow: hidden;
+    transform: translateY(0);
 }
 .info_img_portfolio {
     position: absolute;
@@ -567,7 +569,10 @@ img {
 .block_img:hover .info_img_portfolio,
 .block_img:focus .info_img_portfolio {
     transform: translateY(0);
-    transition: var(--transition);
+}
+.img_text_description:hover .info_img_portfolio,
+.img_text_description:focus .info_img_portfolio {
+    transform: translateY(0);
 }
 .text_info_img_portfolio {
     margin: 0px;
@@ -587,6 +592,7 @@ img {
     height: 100%;
     padding: 88px 0px 13px 0px;
     background: rgba(46, 47, 66, 0.4);
+    transition: var(--transition);
 }
 .backdrop.is-hidden {
     opacity: 0;
@@ -618,9 +624,10 @@ img {
     border-radius: 50%;
     background: var(--border-bottom);
     border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: fill var(--transition);
 } 
 .style_button:hover,
 .style_button:focus {
     fill: var(--fff);
-    transition: var(--transition);
+    
 }
