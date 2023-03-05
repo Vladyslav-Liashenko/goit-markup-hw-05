@@ -501,7 +501,6 @@ img {
 .section4_socials_link:focus {
     border: 1px solid var(--button-color);
     fill: var(--button-color);
-    
 }
 /* Footter social */
 .container_footer{
