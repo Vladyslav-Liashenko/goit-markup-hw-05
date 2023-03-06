@@ -376,13 +376,18 @@ address {
     cursor: pointer;
     transition: color var(--transition),
     background-color var(--transition),
-    border var(--transition);
+    border var(--transition),
+    box-shadow var(--transition);
 }
 .button_filter:hover,
 .button_filter:focus {
     background-color: var(--button-color);
-    border: var(--button-color);
+    border-color: var(--button-color);
     color: var(--fff);
+    box-shadow:
+        0px 3px 1px rgb(0 0 0 / 10%),
+        0px 2px 1px rgb(0 0 0 / 8%),
+        0px 2px 2px rgb(0 0 0 / 12%);
 }
 .position {
     font-style: normal;
@@ -633,6 +638,7 @@ img {
     padding: 8px;
     border-radius: 50%;
     background: var(--border-bottom);
+    cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: fill var(--transition),
     background-color var(--transition);
